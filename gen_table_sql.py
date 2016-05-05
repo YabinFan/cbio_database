@@ -19,9 +19,9 @@ def main():
 
     sql = "use %s;"%(args.d)+\
           "\n-- change the table name below"+\
-          "\ncreate [table_name] ("+\
+          "\ncreate table [table_name] ("+\
           "\n-- modify the types of fields below"+\
-          "\t\n%s"%(' [type],\n\t'.join(headers))+\
+          "\t\n%s"%(' [type],\n\t'.join(headers))+" [type]"\
           "\n-- add constraints below"+\
           "\n\n\n);"
     print sql
